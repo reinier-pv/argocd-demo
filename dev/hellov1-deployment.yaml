@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hellov1
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      role: hellov1
+  template:
+    metadata:
+      labels:
+        role: hellov1
+    spec:
+      containers:
+      - name: hellov1
+        image: gcr.io/google-samples/hello-app:1.0
+        ports:
+        - containerPort: 8080
