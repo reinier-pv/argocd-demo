@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: hellov2
+  name: hello-v2-app
 spec:
   replicas: 3
   selector:
